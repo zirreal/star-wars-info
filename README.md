@@ -15,4 +15,4 @@
 - async/await
 
 ## Используемый сервер
-- [Star Wars API] (https://swapi.dev).
+- [Star Wars API](https://swapi.dev).
