@@ -1,0 +1,270 @@
+@font-face {
+    font-family: "Star Wars";
+    src: url("../fonts/star_jedi_regular-webfont.woff2") format("woff2");
+    src: url("../fonts/star_jedi_regular-webfont.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+body {
+    background-color: #000;
+}
+
+img {
+    max-width: 350px;
+    height: 400px;
+    transform-origin: 50% 65%;
+    transition: transform 3s, filter 0.9s ease-in-out;
+    filter: grayscale(1);
+}
+
+#app {
+    /* width: 100vw; */
+    height: 100vh;
+    /* background-image:url('../img//bg-3.jpg'); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.spinner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner__text {
+    font-family: 'Star Wars', sans-serif;
+    color: #ffe81f;
+    animation: flicker 3s infinite ease-in-out;
+}
+
+
+@keyframes flicker
+{
+    0% {opacity:0;}
+    10% {opacity:.5;}
+    20% {opacity:0;}
+    30% {opacity: 0.4;};
+    40% {opacity: 0.8;}
+    50% {opacity:1;}
+    60% {opacity:0.8;}
+    70% {opacity: 0.4;};
+    80% {opacity: 0;}
+    90% {opacity:1;}
+    100% {opacity: 0.5;}
+}
+
+.spinner-img {
+    max-width: 325px;
+    height: 100px;
+    object-fit: contain;
+    filter: brightness(0.6);
+    animation: movement 3s infinite ease-in-out;
+}
+
+
+@keyframes movement
+{
+    0% {transform: translate(-1000px, 10px);}
+    20% {transform: translate(30px, 30px);}
+    50% {transform: translate(80px, -30px);}
+    80% {transform: translate(250px, 60px);}
+    100% {transform: translate(2000px, 0px);}
+}
+
+.small-spinner {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spin {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 30px auto;
+    border: 5px solid transparent;
+    border-radius: 100%;
+    border-top-color: rgb(0, 0, 0);
+    animation: spin 1s ease infinite;
+}
+
+.spin-text {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+}
+
+@keyframes spin {
+    to {
+      transform: rotateZ(360deg);
+    }
+}
+
+.btn-up {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 5%
+
+}
+
+.btn-up:hover {
+    color: #fff;
+}
+
+.btn-up.active {
+    display: block;
+}
+
+
+.container-episode {
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    background-repeat: repeat;
+}
+
+.card {
+    width: calc((100% - 20px) / 3);
+    font-size: 16px;
+    align-items: center;
+    color: #fff;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    /* background-color: #ffe81f; */
+    /* background-color: #000; */
+}
+
+.card:not(:nth-last-child(-n+3)) {
+    margin-bottom: 10px;
+}
+
+.card:hover img {
+    filter: grayscale(0);
+    transform: scale(1.4);
+}
+
+.card-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-subtitle,
+.card-title {
+    font-family: 'Star Wars', sans-serif;
+    color: #000;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #222222;
+}
+
+.btn {
+    font-family: 'Star Wars';
+    background-color: #000;
+    color: #ffe81f;
+}
+
+.episode-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.episode-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn-episodes {
+    order: -1;
+}
+
+.episode-left {
+    margin-right: 20px;
+}
+
+.episode-title {
+    font-family: "Star Wars", sans-serif;
+    margin-right: 10px;
+}
+
+.sub-title {
+    font-family: "Star Wars", sans-serif;
+}
+
+.episode__text {
+    width: 60%;
+}
+
+.decor {
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    padding: 20px;
+    background-image: url(../img/r2d2.png);
+    background-size: contain;
+}
+
+.episode__img {
+    max-width: 100%;
+    max-height: 600px;
+    height: auto;
+    width: 100%;
+    filter: none;
+    border-radius: 10px;
+    z-index: 5;
+}
+
+.list-title {
+    font-family: 'Star Wars', sans-serif;
+}
+
+.episode-list {
+    width: 50%;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.episode-item {
+    border: 1px solid #ffe81f;
+    color: #ffe81f;
+    background-color: #000;
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: calc((100% - 20px) / 2);
+    }
+
+    .card:not(:nth-last-child(-n+2)) {
+        margin-bottom: 10px;
+    }
+
+
+    .episode__text {
+        width: 100%;
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .card {
+        width: 100%;
+    }
+
+    .card:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
