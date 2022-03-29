@@ -10,7 +10,8 @@
 
 Использование fetch API. 
 
-Результат можно увидеть здесь:
+Результат можно увидеть здесь: https://capable-llama-a28d16.netlify.app
+
 
 
 ## Основные Особенности:
@@ -38,7 +39,8 @@ a simple star wars movies information app
 
 **DEMO only**.  
 
-You can check out the result here::
+You can check out the result here: https://capable-llama-a28d16.netlify.app
+
  
 
 ## Key Features:
